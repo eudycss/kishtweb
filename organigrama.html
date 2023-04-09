@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+
+    
+
+
+  <meta charset="UTF-8">
+  <title>Organigrama</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    .org-chart {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .person {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      background-color: #f2f2f2;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+    }
+    
+    .person:hover {
+      background-color: #fff;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .person img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 50%;
+    }
+    
+    .person-details {
+      margin-top: 20px;
+    }
+    
+    .person h2 {
+      margin: 0;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    
+    .person p {
+      margin-top: 5px;
+      font-size: 1.2em;
+      color: #888;
+    }
+
+
+/* Estilos para el cuadro de diálogo */
+		.dialog {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #fff;
+			padding: 20px;
+			border: 2px solid #ccc;
+			border-radius: 10px;
+			z-index: 9999;
+			box-shadow: 0 0 20px rgba(0,0,0,0.3);
+			max-width: 400px;
+		}
+
+		.dialog h2 {
+			margin-top: 0;
+		}
+
+		.dialog p {
+			margin-bottom: 0;
+		}
+
+		/* Estilos para el enlace que abre el cuadro de diálogo */
+		.link {
+			color: blue;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+        h1 {
+      text-align: center;
+    }
+
+    /* ANimacion estr escriebiendo*/
+    .typing-animation {
+  overflow: hidden; /* Para ocultar el cursor que parpadea al final del texto */
+  border-right: 0.15em solid orange; /* Agrega un borde naranja delgado */
+  white-space: nowrap; /* Evita que el título se desplace a la siguiente línea */
+  margin: 0 auto; /* Centra horizontalmente el título */
+  letter-spacing: 0.15em; /* Agrega un espacio entre letras */
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; /* Agrega las animaciones */
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Parpadeo del cursor */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+    /* */
+
+    /* */
+    .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+}
+
+.logo-container img {
+  height: 50px;
+  margin-right: 50px;
+}
+
+.miembros {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
+.miembros .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.miembros h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.miembro {
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.miembro img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.miembro h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.miembro p {
+  font-size: 18px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+    
+  </style>
+
+  </head>
+<body>
+
+    <div class="logo-container">
+        
+        <img src="https://kisth.org/wp-content/uploads/2022/10/cropped-Recurso-31-kisth.png" alt="Logo de la organización">
+        
+      </div></br>
+    </br>
+</br>
+</br></br>
+
+<h1 class="typing-animation">Equipo Directivo</h1>
+
+  <div class="org-chart">
+    
+<div class="person">
+  <img src="https://kisth.org/wp-content/uploads/2021/03/JESS.jpeg" alt="Foto de la persona">
+  <h3>Jéssica  Morales</h3>
+  <p>Directora Ejecutiva</p>
+  <p>Presidenta</p>
+  <p><i class="far fa-envelope" style="color:#333"></i> jessica.morales@kisth.org</p>
+
+  <ul class="wp-block-social-links">
+    <li><a href="https://www.linkedin.com/in/j3ss1c4000-m//" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+  </ul>
+</div>
+
+    <div class="person">
+      
+        <img src="https://kisth.org/wp-content/uploads/2023/03/j.png" alt="Foto de la persona">
+      
+      
+        <h3>Janeth Bonilla</h3>
+        <p>Subdirectora Ejecutiva</p>
+        <p>Vicepresidenta</p>
+        <p> <i class="far fa-envelope" style="color: #333;"></i> janeth.bonilla@kisth.org</p>
+        <ul class="wp-block-social-links">
+            <li><a href="https://www.linkedin.com/in/janeth-bonilla-0192391a7/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+        
+      
+    </div>
+
+
+
+
+    
+      <section class="miembros">
+        
+        <div class="container">
+          
+
+
+          <div class="person">
+            <img src="https://kisth.org/wp-content/uploads/2021/04/Michelcampos-1-e1679640845399.jpg" alt="Foto de la persona">
+          
+            <h3>Nancy Michel Campos Córdova</h3>
+            <p>Coordinadora de Finanzas</p>
+            <p>Tesorera</p>
+            <p> <i class="far fa-envelope" style="color: #333;"></i> michel.campos@kisth.org</p>
+            <ul class="wp-block-social-links">
+        <li><a href="https://www.linkedin.com/in/michel-campos-050846212/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+        </div>
+
+          <div class="person">
+      
+            <img src="https://kisth.org/wp-content/uploads/2021/03/kiwar.jpg" alt="Foto de la persona">
+          
+          
+            <h3>kiwar Maigua</h3>
+            <p>Coordinador de Proyectos</p>
+            <p>Secretario</p>
+            <p> <i class="far fa-envelope" style="color: #333;"></i> kiwar.maigua@kisth.org</p>
+            <ul class="wp-block-social-links">
+        <li><a href="https://www.linkedin.com/in/kiwar-maigua-0a21261b9/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+      </ul>  
+        </div>
+
+          <div class="person">
+            <img src="https://kisth.org/wp-content/uploads/2023/03/WhatsApp-Image-2023-02-21-at-22.27.09.jpeg" alt="Foto de la persona">
+            <h3>Sebastian Cabascango</h3>
+            <p>Coordinador de Tecnologia</p>
+            <p> <i class="far fa-envelope" style="color: #333;"></i> sebastian.cabascango@kisth.org</p>
+            <ul class="wp-block-social-links">
+        <li><a href="https://www.linkedin.com/in/sebastiancabascango/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+          </div>
+
+          
+        </div>
+            
+    <section class="miembros">
+      <h2 class="typing-animation">Equipo Financiero</h2>
+
+      <div class="container">
+         
+       
+        <div class="person">
+          <img src="https://kisth.org/wp-content/uploads/2023/03/136083993_229857345416032_4144687203033287744_n.jpg" alt="Foto del miembro">
+          <h3>Fredy Guandinango</h3>
+          <p>Analista de Contabilidad</p>
+          <ul class="wp-block-social-links">
+            <li><a href="https://www.linkedin.com/in/fredy-santiago-guandinango-lima-baa6b8180/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+            </div>
+
+            <div class="person">
+              <img src="https://kisth.org/wp-content/uploads/2023/03/ZamyChancusig.jpeg" alt="Foto de la persona">
+              <h3>Zamy Chancusig</h3>
+              <p>Analista de presupuestos</p>
+              <ul class="wp-block-social-links">
+          <li><a href=" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+            </div>
+
+            <div class="person">
+              <img src="https://kisth.org/wp-content/uploads/2023/03/MarceloPerdomo.jpeg" alt="Foto de la persona">
+              <h3>Marcelo Perdomo</h3>
+              <p>Analista Administrativo</p>
+              <ul class="wp-block-social-links">
+          <li><a href="https://www.linkedin.com/in/marcelo-perdomo/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+            </div>
+      
+  </section>
+          
+
+         
+           
+          </div>
+        
+        </div>
+
+        
+        
+        
+      </section>
+      
+
+      
+    
+    <section class="miembros">
+      <h2 class="typing-animation" >Equipo Académio </h2>
+      <h3>Idiomas y Educación </h3>
+
+      <div class="container">
+         
+           
+            <div class="person">
+              <img src="https://kisth.org/wp-content/uploads/2023/03/SoledadCh.jpg" alt="Foto de la persona">
+              <h3>Soledad Chango</h3>
+              <p>Coordinadora del Área de idomas</p>
+              <ul class="wp-block-social-links">
+          <li><a href="https://www.linkedin.com/in/soledad-chango-50a828195/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+            </div>
+     
+  </section>
+
+    <section class="miembros">
+      
+      <h3>Ciencias Sociales y Humanidades </h3>
+
+      <div class="container">
+        
+          <div class="person">
+              <img src="https://kisth.org/wp-content/uploads/2023/03/felipeMR-e1679774348423.jpg" alt="Felipe Males">
+              <h3>Felipe Males</h3>
+              <p>Coordinador del Observatorio de Économia kichwa</p>
+              <ul class="wp-block-social-links">
+          <li><a href="https://www.linkedin.com/in/felipe-males-lema-046bb714b/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+            </div>
+     
+            
+          </section>
+
+  <section class="miembros">
+      
+    <h3>Saberes Ancestrales, Salud y Bienestar</h3>
+
+    <div class="container">
+      
+        <div class="person">
+            <img src="https://kisth.org/wp-content/uploads/2023/03/linkanDel.jpg" alt="">
+            <h3>Likan Delgago</h3>
+            <p>Especialista de Salud y Medicina Ancestrales </p>
+            <ul class="wp-block-social-links">
+        <li><a href="https://www.linkedin.com/in/likan-delgado-2327187b/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+          </div>         
+</section>
+
+    <section class="miembros">
+      
+      <h3>Ciencias e Ingeniería </h3>
+
+      <div class="container">
+   
+          <div class="person">
+              <img src="https://kisth.org/wp-content/uploads/2023/03/ToaQuindi.jpg" alt="">
+              <h3>Toa Quindi</h3>
+              <p>Coordinadora/Lider de Warmi STEM </p>
+              <ul class="wp-block-social-links">
+          <li><a href="https://www.linkedin.com/in/toa-quindi-pomavilla-617b33b9/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+            </div>
+     
+            <div class="person">
+              <img src="https://kisth.org/wp-content/uploads/2023/03/CBOtavlo.jpg" alt="">
+              <h3>Benjamin Otavalo</h3>
+              <p>Coordinador/Lider de Runa Space </p>
+              <ul class="wp-block-social-links">
+          <li><a href="https://www.linkedin.com/in/cesarbotavalo/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+            </div>
+          <div class="person">
+              <img src="https://kisth.org/wp-content/uploads/2023/04/WhatsApp-Image-2023-03-31-at-11.55.04-e1680718886330.jpg" alt="">
+              <h3>Sumak Mayta</h3>
+              <p>Especialista en Arquitectura y Patriminia Material </p>
+              <ul class="wp-block-social-links">
+          <li><a href="https://www.linkedin.com/in/swmak-mayta-zapata-145394130/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+            </div>  
+      </div>     
+  </section>
+
+    
+  <section class="miembros">
+      
+    <h3>Arte y Diseño</h3>
+
+    <div class="container">
+      
+        <div class="person">
+            <img src="https://kisth.org/wp-content/uploads/2021/03/erika.jpg" alt="">
+            <h3>Erika Tenezaca</h3>
+            <p>Coordinadora de Artes y Diseño </p>
+            <ul class="wp-block-social-links">
+        <li><a href="" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+          </div>
+        
+   
+               
+</section>
+
+<script type="text/javascript">
+		// Función para mostrar el cuadro de diálogo
+		function showDialog(event) {
+			event.preventDefault();
+			var dialog = event.target.nextElementSibling;
+			dialog.style.display = "block";
+		}
+
+		// Función para cerrar el cuadro de diálogo
+		function closeDialog(event) {
+			event.preventDefault();
+			var dialog = event.target.closest(".dialog");
+			dialog.style.display = "none";
+		}
+
+		// Agregar un listener de evento a todos los enlaces que abren el cuadro de diálogo
+              var links = document.querySelectorAll(".link");
+	for (var i = 0; i < links.length; i++) {
+		links[i].addEventListener("click", showDialog);
+	}
+
+	// Agregar un listener de evento a todos los botones que cierran el cuadro de diálogo
+	var buttons = document.querySelectorAll(".dialog button");
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener("click", closeDialog);
+	}
+
+
+    //titulo aninamo
+    $(document).ready(function() {
+  var orgName = "Nombre de la organización";
+  var orgNameLength = orgName.length;
+  var i = 0;
+  setInterval(function() {
+    if(i <= orgNameLength) {
+      var typing = orgName.substring(0, i);
+      $("#org-name").text(typing);
+      i++;
+    }
+  }, 5);
+});
+    //fin titulo animado
+</script>
+
+
+
+
+
+
+</body>
+</html>
